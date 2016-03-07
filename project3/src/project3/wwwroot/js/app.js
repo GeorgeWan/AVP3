@@ -1,29 +1,23 @@
-﻿var myApp = angular.module("myApp", ['ngRoute']);
+﻿
+var gitSearchApp = angular.module("gitSearchApp", ['ngRoute', 'gitSearchControllers', 'gitSearchServices']);
 
 
-myApp.config(function ($routeProvider) {
+gitSearchApp.config(function ($routeProvider) {
     $routeProvider
     .when('/', {
-        templateUrl: 'pages/first.html',
-        controller: 'firstController'
-        })
-    .when('/second', {
-        templateUrl: 'pages/second.html',
-        controller: 'secondController'
+        templateUrl: 'templates/search.html',
+        controller: 'searchController'
     })
+    .when('/user', {
+        templateUrl: 'templates/user.html',
+        controller: 'userController'
+    })
+    .when('/repository', {
+        templateUrl: 'templates/repository.html',
+        controller: 'repositoryController'
+    });
 })
 
 
-myApp.controller("mainController", ["$scope", "$log",function ($scope, $log) {
-    $scope.name = 'Family';
-   
-}]);
-
-myApp.controller("firstController", ["$scope", "$log", function ($scope, $log) {
-    $scope.name = 'George';
-}]);
 
 
-myApp.controller("secondController", ["$scope", "$log", function ($scope, $log) {
-    $scope.name = 'Rachel';
-}]);

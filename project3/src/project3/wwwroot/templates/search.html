@@ -1,0 +1,35 @@
+﻿<div class="row" style="height:200px">
+
+</div>
+
+<div class="row">
+    <div class="col-md-4"></div>
+    <div class="col-md-4">
+        <img src="../images/logo.png" class="img-responsive img-rounded" />
+    </div>
+    <div class="col-md-4"></div>
+</div>
+<div class="row" style="height:30px">
+  
+</div>
+
+<div class="row">
+    <div class="col-md-3"></div>
+    <div class="col-md-6">
+        <form class="form-horizontal" role="form">
+            <div class="form-group">
+                <input type="text" class="form-control" placeholder="Search Github {{searchString}}" size="70" ng-model="inputString">
+            </div>
+            <div class="form-group">
+                <div class="col-sm-offset-3 col-sm-7">
+                    <label class="radio-inline"><input type="radio" name="optradio" ng-model="searchString" value="user">Search User</label>
+                    <label class="radio-inline"><input type="radio" name="optradio" ng-model="searchString" value="repo">Search Repo</label>
+                    &nbsp;&nbsp;&nbsp;
+                    <!--<a href="#/user" class="btn btn-warning btn-md" role="button" ng-click="search()">Go Git!</a>-->
+                    <button type="submit" class="btn btn-warning btn-md" ng-click="search()">Go Git!</button>
+                </div>
+        </form>
+    </div>
+    <div class="col-md-3"></div>
+</div>
+
